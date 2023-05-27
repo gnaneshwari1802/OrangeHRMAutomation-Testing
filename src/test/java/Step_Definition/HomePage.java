@@ -10,7 +10,7 @@ public class HomePage {
     public WebDriver driver;
     @Given("^I am on the Home page$")
     public void i_am_on_the_Home_page() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "c://chromedriver.exe");
+        System.setProperty("web-driver.chrome.driver", "c://chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -21,7 +21,7 @@ public class HomePage {
     @Then("^I should see the application logo$")
     public void i_should_see_the_application_logo() throws Throwable {
         driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[1]/img")).isDisplayed();
-        //driver.findElement(By.cssSelector("/html/body/div/div[1]/div/div[1]/div/div[1]/img")).isDisplayed();
+        driver.findElement(By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-branding > img")).isDisplayed();
 
     }
 }
