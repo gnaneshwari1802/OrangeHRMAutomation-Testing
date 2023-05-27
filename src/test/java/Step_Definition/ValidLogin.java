@@ -28,7 +28,8 @@ public class ValidLogin {
 
     @And("^I enter password in the password field$")
     public void iEnterPasswordInThePasswordField() {
-        driver.findElement(By.name("Password")).sendKeys("admin123");
+        driver.findElement(By.name("password")).sendKeys("admin123");
+
     }
 
     @When("^I click the login button$")
@@ -39,10 +40,10 @@ public class ValidLogin {
 
     @Then("^I should be successfully logged in$")
     public void iShouldBeSuccessfullyLoggedIn() {
-        //String ExpectedLoggedInUser = "Paul Collings";
-        //String ActualLoggedInUser = driver.findElement(By.xpath(""));
-        //Assert.assertArrayEquals(ExpectedLoggedInUSer, ActualLoggedInUser);
-        //System.out.println(ActualLoggedInUser);
+        String ExpectedLoggedInUser = "vishwas Collings";
+        String ActualLoggedInUser = driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p")).getText();
+        Assert.assertEquals(ExpectedLoggedInUser, ActualLoggedInUser);
+        System.out.println(ActualLoggedInUser);
 
         driver.quit();
     }

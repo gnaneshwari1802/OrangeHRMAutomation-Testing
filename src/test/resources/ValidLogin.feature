@@ -7,4 +7,4 @@ Feature: Login
     And I enter password in the password field
     When I click the login button
     Then I should be successfully logged in
-    Then I can logout
+    #Then I can logout
