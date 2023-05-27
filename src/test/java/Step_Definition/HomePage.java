@@ -14,12 +14,14 @@ public class HomePage {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        Thread.sleep(2000); //wait for 2 seconds or 2000 milliseconds//
 
     }
 
     @Then("^I should see the application logo$")
     public void i_should_see_the_application_logo() throws Throwable {
         driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[1]/img")).isDisplayed();
+        //driver.findElement(By.cssSelector("/html/body/div/div[1]/div/div[1]/div/div[1]/img")).isDisplayed();
 
     }
 }
