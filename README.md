@@ -3,7 +3,7 @@ Author: Dalbert Onyebuchi
 
 ```mvn clean ```
 
-```mvn complie ```
+```mvn compile ```
 
 ```mvn test ```
 
