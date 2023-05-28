@@ -1,3 +1,5 @@
+package Step_Definition;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -39,7 +41,7 @@ public class Admin_searchUser {
     @When("^I enter user data$")
     public void iEnterUserData() {
         driver.findElement(By.className("oxd-input oxd-input--active")).sendKeys("Alic.Duval");
-        new Select(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")))
+        //new Select(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")))
     }
 
     @And("^click on the search button$")
