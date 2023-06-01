@@ -40,7 +40,7 @@ public class ValidLogin {
 
     @Then("^I should be successfully logged in$")
     public void iShouldBeSuccessfullyLoggedIn() {
-        String ExpectedLoggedInUser = "Nikhil KK";
+        String ExpectedLoggedInUser = "anusha Collings";
         String ActualLoggedInUser = driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p")).getText();
         Assert.assertEquals(ExpectedLoggedInUser, ActualLoggedInUser);
         System.out.println(ActualLoggedInUser);
