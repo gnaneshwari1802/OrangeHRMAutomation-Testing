@@ -40,10 +40,19 @@ public class ValidLogin {
 
     @Then("^I should be successfully logged in$")
     public void iShouldBeSuccessfullyLoggedIn() {
-        String ExpectedLoggedInUser = "Pavan Green";
+        String ExpectedLoggedInUser = "Nikhil KK";
         String ActualLoggedInUser = driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p")).getText();
         Assert.assertEquals(ExpectedLoggedInUser, ActualLoggedInUser);
         System.out.println(ActualLoggedInUser);
+
+    }
+    @Then("^I can logout$")
+    public void iCanLogout() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.linkText("Logout")).click(); //Clicking the logout button
+        Thread.sleep(5000);
+        driver.findElement(By.name("username")).isDisplayed(); //Asserts that user has been logged out by showing the username field.
 
         driver.quit();
     }
