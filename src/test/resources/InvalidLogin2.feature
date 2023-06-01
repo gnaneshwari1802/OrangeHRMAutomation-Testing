@@ -4,5 +4,5 @@ Feature: Login
     Given I get to the homepage
     When I type in correct username
     And I type in incorrect password
-    When I click the login
+    When I tap the login
     Then My login attempt should fail

@@ -11,8 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class InvalidLogin1 {
     public WebDriver driver;
-    @Given("^I am get on the homepage$")
-    public void iAmGetOnTheHomepage() throws InterruptedException {
+    @Given("^I am arrive on the homepage$")
+    public void iAmArriveOnTheHomepage() throws InterruptedException {
         System.setProperty("web-driver.chrome.driver", "c://chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -42,5 +42,7 @@ public class InvalidLogin1 {
         String ActualLoggedInErrorMessage = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p")).getText();
         Assert.assertEquals(ExpectedLoggedInErrorMessage, ActualLoggedInErrorMessage);
         System.out.println(ActualLoggedInErrorMessage);
+
+        driver.quit();
     }
 }
