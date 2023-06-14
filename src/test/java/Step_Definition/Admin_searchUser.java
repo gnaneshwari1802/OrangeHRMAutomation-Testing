@@ -42,7 +42,7 @@ public class Admin_searchUser {
     @When("^I enter user data$")
     public void iEnterUserData() throws InterruptedException {
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input")).sendKeys("Alice.Duval"); // text field for Username
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input")).sendKeys("Admin"); // text field for Username
         Thread.sleep(2000);
         //new Select(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]"))).selectByVisibleText("ESS");  // because this is a drop-down field for User Role
         // ERROR-:- org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "div"
@@ -50,7 +50,7 @@ public class Admin_searchUser {
         //driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")).click();
 
         //Thread.sleep(2000);
-        //driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/input")).sendKeys("Alice Duval"); // text field for Employee Name
+        //driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/input")).sendKeys("Admin"); // text field for Employee Name
         //Thread.sleep(2000);
         //new Select(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]"))).selectByVisibleText("Enabled");  // because this is a drop-down field for Status
 
@@ -64,7 +64,7 @@ public class Admin_searchUser {
 
     @Then("^Search results should return the correct user$")
     public void searchResultsShouldReturnTheCorrectUser() {
-        String ExpectedReturnedUsername = "Alice.Duval";
+        String ExpectedReturnedUsername = "Admin";
         String ActualReturnedUsername = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[2]/div")).getText();
         Assert.assertEquals(ExpectedReturnedUsername, ActualReturnedUsername);
         System.out.println(ActualReturnedUsername);
