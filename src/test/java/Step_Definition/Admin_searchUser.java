@@ -51,6 +51,7 @@ public class Admin_searchUser {
 
         //Thread.sleep(2000);
         //driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/input")).sendKeys("Admin"); // text field for Employee Name
+        //driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/input")).sendKeys("Alice Duval"); // text field for Employee Name
         //Thread.sleep(2000);
         //new Select(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]"))).selectByVisibleText("Enabled");  // because this is a drop-down field for Status
 
@@ -69,6 +70,7 @@ public class Admin_searchUser {
         Assert.assertEquals(ExpectedReturnedUsername, ActualReturnedUsername);
         System.out.println(ActualReturnedUsername);
 /**
+<<<<<<< HEAD
  String ExpectedReturnedUserRole = "ESS";
  String ActualReturnedUserRole = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[3]/div")).getText();
  Assert.assertEquals(ExpectedReturnedUserRole, ActualReturnedUserRole);
@@ -84,6 +86,7 @@ public class Admin_searchUser {
  Assert.assertEquals(ExpectedReturnedStatus, ActualReturnedStatus);
  System.out.println(ActualReturnedStatus);
  **/
+
         driver.quit();
     }
 }
