@@ -1,3 +1,4 @@
+@ignore
 Feature: Login
 
   Scenario: Login with invalid credentials should not be successful

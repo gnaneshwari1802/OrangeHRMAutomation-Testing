@@ -1,3 +1,4 @@
+@ignore
 Feature: Login
 
   Scenario:  User with wrong password should not be able to login

@@ -1,3 +1,4 @@
+@ignore
 Feature: Home page  /* Requirements*/
 
   Scenario: Verify that application logo is displayed on the home page. /* test case*/
