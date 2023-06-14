@@ -16,7 +16,7 @@ public class Admin_searchUser {
     public void iAmLoggedIn() throws InterruptedException {
         System.setProperty("web-driver.chrome.driver", "c://chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(2000); //wait for 2 seconds or 2000 milliseconds//
         driver.findElement(By.name("username")).sendKeys("Admin");
@@ -28,15 +28,15 @@ public class Admin_searchUser {
     @When("^I click the admin menu$")
     public void iClickTheAdminMenu() throws InterruptedException {
         driver.findElement(By.xpath("//span[text() = 'Admin']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/aside/nav/div[2]/div/div/button")).click(); //Minimize menu bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/div/div/button")).click(); //Minimize menu bar
+
+
         }
 
     @Then("^I should see the users page$")
-    public void iShouldSeeTheUsersPage() throws InterruptedException {
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//h5[text() ='System Users']")).isDisplayed();
-        //driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/h5")).isDisplayed();
+    public void iShouldSeeTheUsersPage() {
+        driver.findElement(By.xpath("//*h5[text() ='System Users']")).isDisplayed();
+        driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/h5")).isDisplayed();
     }
 
     @When("^I enter user data$")
