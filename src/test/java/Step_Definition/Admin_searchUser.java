@@ -68,23 +68,22 @@ public class Admin_searchUser {
         String ActualReturnedUsername = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[2]/div")).getText();
         Assert.assertEquals(ExpectedReturnedUsername, ActualReturnedUsername);
         System.out.println(ActualReturnedUsername);
-/**
-         String ExpectedReturnedUserRole = "ESS";
-         String ActualReturnedUserRole = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[3]/div")).getText();
-         Assert.assertEquals(ExpectedReturnedUserRole, ActualReturnedUserRole);
-         System.out.println(ActualReturnedUserRole);
+    /**
+        String ExpectedReturnedUserRole = "ESS";
+        String ActualReturnedUserRole = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[3]/div")).getText();
+        Assert.assertEquals(ExpectedReturnedUserRole, ActualReturnedUserRole);
+        System.out.println(ActualReturnedUserRole);
 
-         String ExpectedReturnedEmployeeName = "Alice Duval";
-         String ActualReturnedEmployeeName = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[5]/div")).getText();
-         Assert.assertEquals(ExpectedReturnedEmployeeName, ActualReturnedEmployeeName);
-         System.out.println(ActualReturnedEmployeeName);
+        String ExpectedReturnedEmployeeName = "Alice Duval";
+        String ActualReturnedEmployeeName = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[5]/div")).getText();
+        Assert.assertEquals(ExpectedReturnedEmployeeName, ActualReturnedEmployeeName);
+        System.out.println(ActualReturnedEmployeeName);
 
-         String ExpectedReturnedStatus = "Enabled";
-         String ActualReturnedStatus = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[5]/div")).getText();
-         Assert.assertEquals(ExpectedReturnedStatus, ActualReturnedStatus);
-         System.out.println(ActualReturnedStatus);
- **/
-
+        String ExpectedReturnedStatus = "Enabled";
+        String ActualReturnedStatus = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[5]/div")).getText();
+        Assert.assertEquals(ExpectedReturnedStatus, ActualReturnedStatus);
+        System.out.println(ActualReturnedStatus);
+    **/
         driver.quit();
     }
 }
