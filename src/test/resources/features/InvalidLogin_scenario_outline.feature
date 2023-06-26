@@ -1,4 +1,4 @@
-Feature: Login
+Feature: Invalid Login Scenario Outline
 
   Scenario Outline: Login with invalid credentials should return correct error message
 
