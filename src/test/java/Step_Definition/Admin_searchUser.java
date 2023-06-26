@@ -1,5 +1,6 @@
 package Step_Definition;
 
+import Base.TestBase;
 import Pages.Admin_Pages;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -11,28 +12,33 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class Admin_searchUser {
+public class Admin_searchUser extends TestBase {
 
-    public WebDriver driver;
-    @Given("^I am logged in$")
-    public void iAmLoggedIn() throws InterruptedException {
-        System.setProperty("web-driver.chrome.driver", "c://chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        Thread.sleep(2000); //wait for 2 seconds or 2000 milliseconds//
+    //Commented out to prevent a null pointer Exception error because "public WebDriver driver"
+    // already exists in the ValidLogin.java file, And this file is the precondition/Background for This file : Admin_searchUser.java file
+    //public WebDriver driver;
 
-        Admin_Pages page = PageFactory.initElements(driver, Admin_Pages.class);
-        page.enterLoginUsername();
-        page.enterLoginPassword();
-        page.clickLoginButton();
+    //Commented out because we have created a Background/Pre-condition in the Admin_searchUser.feature file
+    //In the CommonSteps1.feature and CommonSteps1.java files.
+    //@Given("^I am logged in$")
+    //public void iAmLoggedIn() throws InterruptedException {
+        //System.setProperty("web-driver.chrome.driver", "c://chromedriver.exe");
+        //driver = new ChromeDriver();
+        //driver.manage().window().maximize();
+        //driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        //Thread.sleep(2000); //wait for 2 seconds or 2000 milliseconds//
 
-        //Commented out because it has been now declared in the Page Object Model file : Admin.Pages.java //
-        //driver.findElement(By.name("username")).sendKeys("Admin");
-        //driver.findElement(By.name("password")).sendKeys("admin123");
-        //driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")).click(); // LoginButton
-        Thread.sleep(5000);
-    }
+        //Admin_Pages page = PageFactory.initElements(driver, Admin_Pages.class);
+        //page.enterLoginUsername();
+        //page.enterLoginPassword();
+        //page.clickLoginButton();
+        //Thread.sleep(5000);
+        ////Commented out because it has been now declared in the Page Object Model file : Admin.Pages.java //
+        ////driver.findElement(By.name("username")).sendKeys("Admin");
+        ////driver.findElement(By.name("password")).sendKeys("admin123");
+        ////driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")).click(); // LoginButton
+
+        //}
 
     @When("^I click the admin menu$")
     public void iClickTheAdminMenu() throws InterruptedException {
