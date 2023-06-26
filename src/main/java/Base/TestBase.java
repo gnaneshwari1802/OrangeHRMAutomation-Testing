@@ -15,7 +15,6 @@ public class TestBase {
     public static Properties CONFIG = null;
 
     public static WebDriver driver = null;
-    public int random;
     public void initialise() throws IOException {
         if (driver == null) {
 //            This code will read the config property file
