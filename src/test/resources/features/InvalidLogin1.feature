@@ -1,5 +1,5 @@
 @ignore
-Feature: Login
+Feature: Invalid Login 1
 
   Scenario: Login with invalid credentials should not be successful
 
