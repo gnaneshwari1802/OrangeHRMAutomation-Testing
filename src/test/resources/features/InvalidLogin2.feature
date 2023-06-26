@@ -1,5 +1,5 @@
 @ignore
-Feature: Login
+Feature: Invalid Login 2
 
   Scenario:  User with wrong password should not be able to login
     Given I get to the homepage
